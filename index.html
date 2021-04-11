@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+			crossorigin="anonymous"
+		/>
+		<title>Tip calculator</title>
+	</head>
+	<body>
+		<form style="margin: 20px auto; max-width: 600px" action="#">
+			<div
+				class="alert alert-success mb-3"
+				role="alert"
+				id="alert"
+				style="display: none"
+			></div>
+			<h1 class="mb-3">Tip calculator made by Pali Pločica</h1>
+			<div class="mb-3">
+				<label for="countOfmoney" class="form-label"
+					>How much was your bill?</label
+				>
+				<input
+					type="number"
+					placeholder="Type your count of money"
+					class="form-control"
+					id="countOfmoney"
+				/>
+				<div class="invalid-feedback">
+					Your value is require. Please type your number.
+				</div>
+			</div>
+			<div class="mb-3">
+				<label for="selectService" class="form-label"
+					>How was your service?</label
+				>
+				<select
+					class="form-select"
+					aria-label="Default select example"
+					id="selectService"
+				>
+					<option value="0">0 %</option>
+					<option value="1">1 %</option>
+					<option value="3">3 %</option>
+					<option value="4">4 %</option>
+					<option value="5">5 %</option>
+					<option value="10">10 %</option>
+				</select>
+			</div>
+			<div class="mb-3">
+				<label for="countOfpeopleBill" class="form-label"
+					>How many people are sharing the bill?</label
+				>
+				<input
+					type="number"
+					placeholder="Type many people sharing the bill"
+					class="form-control"
+					id="countOfpeopleBill"
+				/>
+				<div class="invalid-feedback">
+					Your value is require. Please type your number.
+				</div>
+			</div>
+			<button type="submit" class="btn btn-primary" id="btn-calculate">
+				Calculate
+			</button>
+			<button type="submit" class="btn btn-danger" id="btn-reset">reset</button>
+		</form>
+		<script src="./main.js"></script>
+	</body>
+</html>
